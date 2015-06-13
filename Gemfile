@@ -15,13 +15,14 @@ gem 'jbuilder', '~> 2.0'
 
 # scraping and test tool
 gem 'capybara'
+gem 'poltergeist'
 
 group :production do
   gem 'rails_12factor'
 end
 
 group :development do
-  gem 'pry'
+  gem 'pry-rails'
   gem 'quiet_assets'
   gem 'web-console', '~> 2.0'
 end

@@ -1,1 +1,30 @@
-div Enter IMEI
+br
+br
+
+.row
+  .col.l6.offset-l3.m8.offset-m2.s12
+    .card-panel.grey.lighten-5.z-depth-1
+      .row.center
+        h5 Repairs and Services Coverage
+      form
+        .row
+          .input-field.col.s12
+            i.mdi-hardware-smartphone.prefix
+            input#imei.validate type='text'
+            label for='imei' Enter IMEI
+        .row.center
+          button.btn.waves-effect.waves-light type='submit' CHECK
+      #progress.progress
+        .indeterminate
+      #response
+        br
+        .row.center
+          h5 Status
+        .card-panel.valign-wrapper
+          i.mdi-alert-error.red-text.small>
+          span Expired
+        .card-panel.valign-wrapper
+          i.mdi-action-verified-user.green-text.small>
+          span Active
+
+br

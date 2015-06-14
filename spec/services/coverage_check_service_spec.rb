@@ -8,13 +8,13 @@ RSpec.describe CoverageCheckService do
   end
 
   describe '.check' do
-    xit 'should return false for expired service' do
+    it 'should return false for expired service' do
       VCR.use_cassette('apple coverage service') do
         expect(described_class.check('013896000639712')).to eq false
       end
     end
 
-    xit 'should return true for active service' do
+    it 'should return true for active service' do
       VCR.use_cassette('apple coverage service') do
         expect(described_class.check('013977000323877')).to eq true
       end

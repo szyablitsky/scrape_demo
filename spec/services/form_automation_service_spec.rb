@@ -17,11 +17,11 @@ RSpec.describe FormAutomationService do
   end
 
   describe '#automate' do
-    xit 'shoud yield page' do
+    it 'shoud yield page' do
       expect { |b| subject.automate(&b) }.to yield_with_args(Capybara::Session)
     end
 
-    xit 'should return page' do
+    it 'should return page' do
       expect(subject.automate { }).to be_a(Capybara::Session)
     end
   end

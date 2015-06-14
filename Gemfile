@@ -31,6 +31,9 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'spring'
+end
+
+group :test do
   gem 'webmock'
   gem 'vcr'
 end

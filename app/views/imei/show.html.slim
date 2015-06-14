@@ -6,11 +6,11 @@ br
     .card-panel.grey.lighten-5.z-depth-1
       .row.center
         h5 Repairs and Services Coverage
-      form
+      = form_tag check_path, remote: true, class: 'imei-form'
         .row
           .input-field.col.s12
             i.mdi-hardware-smartphone.prefix
-            input#imei.validate type='text'
+            input#imei.validate type='text' name='imei'
             label for='imei' Enter IMEI
         .row.center
           button.btn.waves-effect.waves-light type='submit' CHECK
@@ -20,12 +20,21 @@ br
         br
         .row.center
           h5 Status
-        .card-panel.valign-wrapper
-          i.mdi-alert-error.red-text.small>
+        #status-expired.card-panel.valign-wrapper
+          i.mdi-alert-error.red-text.small
+          | &nbsp;
           span Expired
-        .card-panel.valign-wrapper
-          i.mdi-action-verified-user.green-text.small>
+        #status-active.card-panel.valign-wrapper
+          i.mdi-action-verified-user.green-text.small
+          | &nbsp;
           span Active
+      #error
+        br
+        .card-panel.valign-wrapper.red.white-text
+          i.mdi-alert-error.small
+          | &nbsp;
+          span Processing error
+
 
 br
 

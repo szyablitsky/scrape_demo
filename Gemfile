@@ -31,6 +31,8 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'spring'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 ruby '2.1.5'

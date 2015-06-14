@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe FormAutomationService do
+
   let(:host) { 'www.example.com' }
   let(:page) { '/' }
   subject { described_class.new(host, page)}
@@ -16,11 +17,11 @@ RSpec.describe FormAutomationService do
   end
 
   describe '#automate' do
-    it 'shoud yield page' do
+    xit 'shoud yield page' do
       expect { |b| subject.automate(&b) }.to yield_with_args(Capybara::Session)
     end
 
-    it 'should return page' do
+    xit 'should return page' do
       expect(subject.automate { }).to be_a(Capybara::Session)
     end
   end

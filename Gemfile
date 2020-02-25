@@ -24,7 +24,7 @@ end
 group :development do
   gem 'pry-rails'
   gem 'quiet_assets'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 2.1'
 end
 
 group :development, :test do
